@@ -1,24 +1,13 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 module.exports = {
   testEnvironment: 'node',
-  testPathIgnorePatterns: [
-    '/node_modules',
-  ],
-  setupFiles: [
-    'jest-plugin-context/setup',
-  ],
-  moduleFileExtensions: [
-    'js',
-    'json',
-    'ts',
-  ],
+  testPathIgnorePatterns: ['/node_modules'],
+  setupFiles: ['jest-plugin-context/setup'],
+  moduleFileExtensions: ['js', 'json', 'ts'],
   transform: {
-    '^.+\\.ts?$': [
-      '@swc/jest',
-    ],
+    '^.+\\.ts?$': ['@swc/jest'],
   },
-  roots: [
-    '<rootDir>/',
-  ],
+  roots: ['<rootDir>/'],
   testTimeout: 10000,
+  preset: 'ts-jest',
 };
